@@ -16,19 +16,16 @@ services:
   nexus:
     container_name: nexus
     build: ./docker-nexus3
-    image: sonatype/nexus3
+    image: sonatype/nexus3:3.10.0
     restart: unless-stopped
     networks:
       - nexus-net
     volumes:
       - ${VOLUME_PATH}:/nexus-data
-    environment:
-      JAVA_MIN_MEM: ${JAVA_MIN_MEM}
-      JAVA_MAX_MEM: ${JAVA_MAX_MEM}
 
   nginx-proxy:
     container_name: nexus-nginx-proxy
-    image: nginx:1.11.10
+    image: nginx:1.13.12
     restart: unless-stopped
     networks:
       - nexus-net
