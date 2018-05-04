@@ -14,10 +14,6 @@ You user should also have sudo permissions for chown command
 # Data volume root dir
 export VOLUME_PATH=/srv/nexus-data
 
-# Java options
-export JAVA_MIN_MEM=4096m
-export JAVA_MAX_MEM=4096m
-
 # will be accessable with https://WEB_SERVER_NAME
 export WEB_SERVER_NAME=sandbox.example.com
 export WEB_SERVER_PORT=443
